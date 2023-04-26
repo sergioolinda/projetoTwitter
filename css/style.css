@@ -1,0 +1,349 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+/* variaveis */
+:root {
+    --azul: #1DA1F2;
+    --preto: #14171A;
+    --cinza-1: #657786;
+    --cinza-2: #AAB8C2;
+    --cinza-3: #E1E8ED;
+    --cinza-4: #F5F8FA;
+    --branco: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* GERAL */
+
+.overlay {
+    background: var(--cinza-3);
+    padding: 48px;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 48px;
+    background: var(--branco);
+}
+
+.center {
+    text-align: center;
+}
+
+.login h1 {
+    font-size: 31px;
+    font-weight: 700;
+    color: var(--preto);
+}
+
+.login form {
+    max-width: 500px;
+    height: 450px;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+
+.login p {
+    margin: 0 auto 20px;
+    color: #7c7373d8;
+    position: relative;
+    width: 200px;
+
+}
+
+.login .linha::before,
+.login .linha::after {
+    position: absolute;
+    content: '';
+    display: block;
+    margin-top: 10px;
+    width: 40%;
+    border-bottom: thin solid var(--cinza-2);
+}
+
+.login .linha::after {
+    right: 0;
+    margin-top: -6px;
+}
+
+form .div3 {
+    position: relative;
+    margin: 30px 0;
+}
+
+form .div3 label {
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    bottom: 5px;
+    cursor: text;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    color: #808080;
+}
+
+form .div3 .input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    outline: 2;
+    font-size: 16px;
+}
+
+form .div3 .input:focus {
+    border-bottom: 2px solid #2D5966;
+}
+
+form .div3 .input:focus~label,
+form .div3 .input:valid~label {
+    transform: translateX(-10px) translateY(-10px);
+    font-size: 0.65em;
+    color: #1dac94;
+    padding: 15px;
+}
+
+form input[type=submit] {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #2D5966;
+    color: #fff;
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+
+.btn {
+    width: 100%;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: blue;
+    border: none;
+}
+
+.btn a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.btn-redes-sociais {
+    margin: 16px 0;
+}
+
+.btn-redes-sociais a {
+    display: block;
+    text-decoration: none;
+    color: var(--preto);
+    padding: 12px 16px 12px 24px;
+    border: 1px solid var(--cinza-2);
+    border-radius: 24px;
+}
+
+.btn-redes-sociais i {
+    font-size: 1.5em;
+    padding-right: 8px;
+    position: absolute;
+    margin-left: -32px;
+    margin-top: -6px;
+}
+
+.btn-google a {
+    font-weight: 400;
+}
+
+.btn-apple a {
+    font-weight: 500;
+}
+
+.btn-google a:hover {
+    background: var(--cinza-4);
+}
+
+.btn-apple a:hover {
+    background: var(--cinza-3);
+}
+
+/* INPUT FLUTUANTE */
+.floating-label-content {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.floating-label {
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 8px;
+    top: 16px;
+    padding: 0 5px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.floating-input {
+    display: block;
+    width: 100%;
+    padding: 24px 8px 8px 8px;
+    border: 1px solid var(--cinza-2);
+    border-radius: 4px;
+}
+
+.floating-input:focus {
+    outline: none;
+    border: 1px solid var(--azul);
+}
+.floating-input::placeholder{
+    color: transparent;
+}
+
+.floating-input:focus ~.floating-label,
+.floating-input:not(:placeholder-shown) ~.floating-label {
+    top: 4px;
+    font-size: 13px;
+    color: var(--azul);
+    font-weight: 500;
+}
