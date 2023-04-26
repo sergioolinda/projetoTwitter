@@ -1,5 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
 /* variaveis */
+
 :root {
     --azul: #1DA1F2;
     --preto: #14171A;
@@ -8,6 +10,8 @@
     --cinza-3: #E1E8ED;
     --cinza-4: #F5F8FA;
     --branco: #fff;
+    --cinza-5:#25313a;
+    --azul-2:#0c8edf;
 }
 
 * {
@@ -162,13 +166,19 @@ table {
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 48px;
     background: var(--branco);
 }
 
 .center {
     text-align: center;
+}
+
+.login {
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .login h1 {
@@ -185,13 +195,47 @@ table {
     margin: 0 auto;
 }
 
+.retirar a{
+    text-decoration: none;
+    color: var(--azul-2);
+}
 
-.login p {
-    margin: 0 auto 20px;
-    color: #7c7373d8;
-    position: relative;
+.retirar span{
+    color: var(--cinza-1);
+}
+
+.info, .data-nascimento {
+    text-align: justify;
+    margin: 16px 0;
+}
+.data-nascimento span {
+    color: var(--cinza-1);
     width: 200px;
+    font-weight: 500;
+}
 
+.info span{
+    color: var(--cinza-1);
+    width: 200px;
+}
+
+.info a {
+    text-decoration: none;
+    color: var(--azul);
+}
+
+.texto-direita {
+    text-align: right;
+}
+
+.texto-direita a {
+    text-decoration: none;
+    color: var(--azul);
+}
+
+.login .linha {
+    position: relative;
+    margin-bottom: 24px;
 }
 
 .login .linha::before,
@@ -200,59 +244,13 @@ table {
     content: '';
     display: block;
     margin-top: 10px;
-    width: 40%;
+    width: 45%;
     border-bottom: thin solid var(--cinza-2);
 }
 
 .login .linha::after {
     right: 0;
     margin-top: -6px;
-}
-
-form .div3 {
-    position: relative;
-    margin: 30px 0;
-}
-
-form .div3 label {
-    position: absolute;
-    pointer-events: none;
-    left: 0;
-    bottom: 5px;
-    cursor: text;
-    text-transform: uppercase;
-    transition: all 0.2s;
-    color: #808080;
-}
-
-form .div3 .input {
-    width: 100%;
-    border-radius: 5px;
-    padding: 10px;
-    outline: 2;
-    font-size: 16px;
-}
-
-form .div3 .input:focus {
-    border-bottom: 2px solid #2D5966;
-}
-
-form .div3 .input:focus~label,
-form .div3 .input:valid~label {
-    transform: translateX(-10px) translateY(-10px);
-    font-size: 0.65em;
-    color: #1dac94;
-    padding: 15px;
-}
-
-form input[type=submit] {
-    padding: 10px 40px;
-    border: 0;
-    border-radius: 10px;
-    background-color: #2D5966;
-    color: #fff;
-    font-size: 14pt;
-    cursor: pointer;
 }
 
 
@@ -266,12 +264,18 @@ form input[type=submit] {
 
 .btn a {
     text-decoration: none;
-    color: aliceblue;
+    color:var(--branco);
 }
 
 .btn-redes-sociais {
     margin: 16px 0;
 }
+
+.btn-esqueceu-senha {
+    margin: 16px 0;
+}
+
+/* COR DAS FONTES/BOTÕES */
 
 .btn-redes-sociais a {
     display: block;
@@ -282,6 +286,27 @@ form input[type=submit] {
     border-radius: 24px;
 }
 
+.btn-avancar-criar-enviar a{
+    display: block;
+    text-decoration: none;
+    color: var(--branco);
+    background: var(--preto);
+    padding: 12px 16px 12px 24px;
+    border: 1px solid var(--preto);
+    border-radius: 24px;
+}
+
+.btn-esqueceu-senha a{
+    display: block;
+    text-decoration: none;
+    color: var(--preto);
+    padding: 12px 16px 12px 24px;
+    border: 1px solid var(--cinza-2);
+    border-radius: 24px;
+}
+
+/*  FORMATAÇÃO DO ICONES  */
+
 .btn-redes-sociais i {
     font-size: 1.5em;
     padding-right: 8px;
@@ -290,6 +315,16 @@ form input[type=submit] {
     margin-top: -6px;
 }
 
+.icon-twitter i {
+    font-size: 2em;
+    padding-right: 8px;
+    position: absolute;
+    margin-left: -32px;
+    margin-top: -30px;
+    color: var(--azul);
+}
+
+/* PESO DA FOTE */
 .btn-google a {
     font-weight: 400;
 }
@@ -297,6 +332,29 @@ form input[type=submit] {
 .btn-apple a {
     font-weight: 500;
 }
+
+.btn-avancar a {
+    font-weight: 700;
+}
+
+.btn-enviar a {
+    font-weight: 700;
+}
+
+.btn-senha a {
+    font-weight: 600;
+}
+
+.retirar span{
+    font-weight: 200;
+}
+
+.termos-servico span{
+    font-weight: 200;
+}
+
+
+/* EFEITO HOVER DOS BOTÕES */
 
 .btn-google a:hover {
     background: var(--cinza-4);
@@ -306,7 +364,21 @@ form input[type=submit] {
     background: var(--cinza-3);
 }
 
+.btn-avancar a:hover {
+    background: var(--cinza-5);
+}
+
+
+.btn-enviar a:hover {
+    background: var(--cinza-5);
+}
+
+.btn-senha a:hover{
+    background: var(--cinza-3);
+}
+
 /* INPUT FLUTUANTE */
+
 .floating-label-content {
     position: relative;
     margin-bottom: 20px;

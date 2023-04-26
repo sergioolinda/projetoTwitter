@@ -14,33 +14,59 @@
     <div class="overlay">
         <div class="container">
             <div class="center login">
-                <form method="post" action="">
+
+                <header>
+                    <div class="icon-twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <br>
                     <h1>Crie sua conta</h1>
-                    <div class="div3">
-                        <input class="input" type="text" name="" id="nome" minlength="5" maxlength="30" required>
-                        <label for="nome">Nome</label>
-                    </div>
+                </header>
 
-                    <div class="div3">
-                        <input class="input" type="text" name="" id="usuario" autocomplete="off" minlength="5"
-                            maxlength="20" required>
-                        <label for="usuario">Número ou email</label>
-                    </div>
+                <main>
+                    <form method="post" action="">
 
-                    <div class="div3">
-                        <p class="p">Data de nascimento</p>
-                        <p>Isso não será exibido publicamente. Confirme sua própria idade, mesmo se esta conta for de
-                            empresa, de um animal de estimação ou outros.</p>
-                        <label for="data"></label>
-                        <input class="input" type="date" id="data" name="data" required>
+                        <div class="floating-label-content">
+                            <input id="usuario" class="floating-input" type="text" placeholder="Nome" minlength="5"
+                                maxlength="30">
+                            <label for="usuario" class="floating-label">Nome</label>
+                        </div>
 
-                    </div>
+                        <div class="floating-label-content">
+                            <input id="usuario" class="floating-input" type="text" placeholder="Celular"
+                                minlength="5" maxlength="30">
+                            <label for="usuario" class="floating-label">Celular</label>
+                        </div>
 
-                    <div class="btn">
-                        <input type="submit" value="Enviar">
-                    </div>
+                        <div class="texto-direita">
+                            <a href="#">Usar e-mail</a>
+                        </div>
 
-                </form>
+                        <p class="data-nascimento">
+                            <span>Data de nascimento</span>
+                        </p>
+
+                        <p class="info">
+                            <span> Isso não será exibido publicamente. Confirme sua própria idade, mesmo se esta
+                                conta for de empresa, de um animal de estimação ou outros.
+                            </span>
+                        </p>
+
+                        <div class="floating-label-content">
+                            <input id="data" class="floating-input" type="date"
+                                placeholder="">
+                            <label for="data" class="floating-label">Data de nascimento</label>
+                        </div>
+
+
+                        <div class="btn-avancar-criar-enviar btn-enviar">
+                            <a href="/paginas/novaConta.html" target="_blank">
+                                Avançar</a>
+                        </div>
+
+
+                    </form>
+                </main>
             </div>
         </div>
     </div>
